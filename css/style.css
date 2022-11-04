@@ -138,6 +138,8 @@ header {
 
 /* bg section */
 .bg {
+  max-width: 1600px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -152,7 +154,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 
-  max-width: 1600px;
   height: 600px;
 }
 
@@ -331,10 +332,13 @@ header {
   align-items: center;
 }
 
-.team .social-media {
+.team .social-button {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin: 0;
+  padding: 0;
 
   width: 44px;
   height: 44px;
@@ -348,7 +352,8 @@ header {
   margin-right: 10px;
 }
 
-.team .social-media:hover {
+.team .social-button:hover,
+.team .social-button:focus {
   background-color: var(--accent-color);
 }
 
@@ -356,17 +361,11 @@ header {
   width: 20px;
   height: 20px;
   fill: var(--color-not-active-media);
-
-  display: block;
 }
 
-.team .social-media:hover .icon {
+.team .social-button:hover .icon,
+.team .social-button:focus .icon {
   fill: var(--primary-bg-color);
-}
-
-.team .social-button {
-  margin: 0;
-  padding: 0;
 }
 
 /* CLIENTS */
@@ -392,9 +391,14 @@ header {
 .clients .clients-list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.clients-list .item {
+.clients-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list .client-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -406,15 +410,13 @@ header {
   cursor: pointer;
 }
 
-.clients-list .item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.clients-list .item:hover {
+.clients-list .client-button:hover,
+.clients-list .client-button:focus {
   border: 1px solid var(--accent-color);
 }
 
-.clients-list .item:hover .clients-logo {
+.clients-list .client-button:hover .clients-logo,
+.clients-list .client-button:focus .clients-logo {
   fill: var(--accent-color);
 }
 
@@ -498,10 +500,15 @@ header {
   display: flex;
 }
 
-.footer-social .item {
+.footer-social .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social .social-button {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 44px;
   height: 44px;
 
@@ -511,13 +518,9 @@ header {
   cursor: pointer;
 }
 
-.footer-social .item:hover,
-.footer-social .item:focus {
+.footer-social .social-button:hover,
+.footer-social .social-button:focus {
   background-color: var(--accent-color);
-}
-
-.footer-social .item:not(:last-child) {
-  margin-right: 10px;
 }
 
 .footer-social .icon {
