@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="page">
-    <header>
+    <header class="page-header">
       <div class="container main-nav">
         <a href="./index.html" class="logo"
           ><span class="logo-accent">Web</span>Studio</a
@@ -62,7 +62,18 @@
         <div class="container">
           <div class="bg-content">
             <h1 class="bg-title">Ефективні рішення для вашого бізнесу</h1>
-            <button class="button primary">Замовити послугу</button>
+            <button class="button primary" data-modal-open>Замовити послугу</button>
+          </div>
+        </div>
+        </div>
+        <!-- MODAL WINDOW -->
+         <div class="backdrop is-hidden"data-modal>
+          <div class="modal">
+            <button class="modal-close" data-modal-close>
+              <svg class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -137,15 +148,19 @@
             <h2 class="photo-title">Чим ми займаємося</h2>
             <ul class="photo-image list">
                 <li class="item">
-                  <img
-                    src="./images/image_doing_1.jpg"
-                    alt="Пошук"
-                    width="370"
-                    height="294"
-                    class="img"
-                  />
+                  <div class="photo-thumb">
+                    <img
+                      src="./images/image_doing_1.jpg"
+                      alt="Пошук"
+                      width="370"
+                      height="294"
+                      class="img"
+                    />
+                    <p class="photo-text">Десктопні додатки</p>
+                  </div>
                 </li>
                 <li class="item">
+                  <div class="photo-thumb">
                   <img
                     src="./images/image_doing_2.jpg"
                     alt="Кодування"
@@ -153,8 +168,11 @@
                     height="294"
                     class="img"
                   />
+                  <p class="photo-text">Мобільні додатки</p>
+                  </div>
                 </li>
                 <li class="item">
+                  <div class="photo-thumb">
                   <img
                     src="./images/image_doing_3.jpg"
                     alt="Дизайн"
@@ -162,6 +180,8 @@
                     height="294"
                     class="img"
                   />
+                  <p class="photo-text">Дизайнерські рішення</p>
+                  </div>
                 </li>
             </ul>
           </div>
@@ -452,5 +472,8 @@
         </div>
       </div>
     </footer>
+    
+        <script src="./js/modal.js"></script>
+
   </body>
 </html>
